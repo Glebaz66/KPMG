@@ -1,0 +1,48 @@
+.about {
+    width: 100%;
+    background-color: rgba(28, 142, 206, .4);;
+    font-family: "Segoe UI";
+
+    &__title{
+        padding: 90px 0 60px 0;
+        color: #1b8dcd;
+        font-size: 36px;
+        text-align: center;
+        text-transform: uppercase;
+
+    }
+
+    .about__info__card{
+        font-family: "Segoe UI";
+        padding-bottom: 40px;
+
+        &__title{
+            padding: 10px 0 25px;
+            color: #1b8dcd;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+        
+        &__text{
+            width: 200px;
+            margin-bottom: 10px;
+            color: #213b7d;
+            font-size: 12px;
+        }
+
+        &__read-more{
+            margin-bottom: 25px;
+            color: #3597d1;
+            font-size: 10px;
+            text-decoration: underline;
+        }
+
+        &__link{
+            color: #3597d1;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: underline;
+
+        }
+    }
+}

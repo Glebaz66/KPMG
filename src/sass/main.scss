@@ -1,0 +1,28 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+@import "mixins";
+
+@import "./components/_header.scss";
+@import "./components/_road-map.scss";
+@import "./components/_offer.scss";
+@import "./components/_about.scss";
+@import "./components/_footer.scss";
+
+body {
+    border-color: #fff;
+    font-family: "Segoe UI", serif;
+    overflow-x: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+

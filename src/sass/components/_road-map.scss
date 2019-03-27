@@ -1,0 +1,189 @@
+.road-map {
+    width: 100%;
+    background-color: #0072bc;
+    margin-bottom: 50px;
+
+    &__heading{
+        padding-left: 50px;
+        margin-bottom: 180px;
+
+        &__text{
+            color: #fff;
+            font-size: 14px;
+        }
+    }
+
+    &__outer {
+        padding-left: 15px;
+        padding-right: 15px;
+
+        .road-map__inner{
+            margin-bottom: 100px;
+
+            .road-map__cards {
+                position: relative;
+
+                &::before {
+                    content: "";
+                    display: inline-block;
+                    position: absolute;
+                    top: 6px;
+                    left: -15px;
+                    width: 100vw;
+                    height: 1px;
+                    background-color: #338ec9;
+                }
+
+                &-closed{
+                    z-index: 2;
+
+                    &::before {
+                        content: "";
+                        display: block;
+                        margin: 0px 41% auto;
+                        width: 12px;
+                        height: 12px;
+                        background-color: #fff;
+                        border-radius: 50px;
+                    }
+                    
+                    .closed__title {
+                        padding-top: 20px;
+                        color: #fff;
+                        text-transform: uppercase;
+                        font-size: 15px;
+                        width: 105px;
+                        text-align: center;
+                    }
+                }
+
+                &-open {
+                    width: 227px;
+                    margin-top: -108px;
+                    text-align: center;
+                    background-color: #1b5eaa;
+                    color: #fff;
+                    border-radius: 15px;
+                    box-shadow: 0px 2px 4px 1px #213b7d;
+                    z-index: 2;
+
+                    .road-map__open__title {
+                        text-transform: uppercase;
+                        font-size: 16px;
+                        padding: 24px 0 30px 0;
+                    }
+
+                    .road-map__open__text {
+                        font-size: 12px;
+                        padding: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .road-map__scroll {
+        padding: 20px;
+
+        &-icon {
+            background: url('../img/road-map_scroll.png') no-repeat;
+            background-size: cover;
+            width: 27px;
+            height: 43px;
+            position: relative;
+            font-size: 12px;
+            color: #fff;
+
+            &::before {
+                content: "Scroll down";
+                display: block;
+                position: absolute;
+                top: 13px;
+                left: -75px;
+                width: 100px;
+            }
+
+            &::after {
+                content: "to see more";
+                display: block;
+                position: absolute;
+                top: 13px;
+                right: -115px;
+                width: 100px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 996px){
+    .road-map {
+
+        &__heading {
+            padding-left: 70px;
+        }
+    }
+}
+@media screen and (max-width: 400px){
+    .road-map {
+
+        &__heading {
+            padding-left: 0;
+        }
+
+        .road-map__inner{
+            .road-map__cards {
+                &-open {
+                    .road-map__open__title {
+                        font-size: 14px;
+                    }
+                    .road-map__open__img img{
+                        width: 100%;
+                    }
+                    .road-map__open__text {
+                        padding: 17px;
+                    }
+                }
+            }
+
+            .road-map__cards {
+                &-closed{
+                    .closed__title {
+                        font-size: 12px;
+                        width: 95px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 399px){
+    .road-map {
+        &__heading{
+            &__text {
+                text-align: justify;
+            }
+        }
+        .road-map__inner{
+            .road-map__cards {
+
+                &-closed{
+                    width: 28%;
+
+                    .closed__title {
+                        font-size: 10px;
+                    }
+                }
+                &-open {
+                    .road-map__open__title {
+                        padding: 18px 0 20px 0;
+                        font-size: 12px;
+                    }
+                    .road-map__open__img img{
+                        width: 60%;
+                    }
+                    .road-map__open__text {
+                        padding: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
